@@ -40,3 +40,26 @@ document.querySelectorAll('[data-sound]').forEach(element => {
     }
   });
 });
+ // Function to set the appropriate video source
+ function setVideoSource() {
+  const videoElement = document.getElementById('hero-video');
+  const videoSource = document.getElementById('videoSource');
+
+  // Check screen width
+  if (window.innerWidth <= 768) {
+    // For mobile screens, set mobile video source
+    videoSource.src = 'image/b2.mp4';
+  } else {
+    // For larger screens, set desktop video source
+    videoSource.src = 'image/bg.mp4';
+  }
+
+  // Reload the video element to apply the new source
+  videoElement.load();
+}
+
+// Run the function on page load
+setVideoSource();
+
+// Optional: Add an event listener to handle screen resizing
+window.addEventListener('resize', setVideoSource);

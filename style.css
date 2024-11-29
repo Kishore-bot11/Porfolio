@@ -147,7 +147,7 @@ a {
   gap: 10px;
 }
 .about p{
-  padding: 40px;
+  padding: 0px;
   line-height: 30px;
 }
 .about span{
@@ -336,8 +336,47 @@ a {
 
 /* Responsive Design */
 @media (max-width: 480px) {
-  h2 {
-    font-size: 2rem;
+  .hero{
+    
+    width: 495px;
+    height: 1000px;
+  }
+  
+  .hero a {
+    padding: 5px;
+    width: 480px;
+    align-self: center;
+    margin-left: -260px;
+    animation: pulse 1.5s infinite ease-in-out;
+  }
+  .about{
+    width: 480px;
+    padding-left: 30px;
+  }
+  .about p {
+    font-size: 16px;
+    line-height: 25px;
+  }
+  .about h2 {
+    font-size: 57px;
+    letter-spacing: 1px;
+  }
+  .qualification {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 0;
+    gap: 10px;
+  }
+  .qualification .q{
+    padding: 20px;
+    border: 2px solid sienna;
+    border-radius: 10px;
+    width: 70%;
+    text-align: left;
+  }
+  .q h3{
+    font-size: 16px;
   }
 
   h3, h4, p {
@@ -347,14 +386,70 @@ a {
   .q {
     width: 200px;
   }
-
+  .project-container{
+    display:flex;
+    gap: 20px;
+    align-content: center;
+    flex-wrap: wrap;
+    
+  }
+  .projects {
+    width: 490px;
+    align-content: center;
+  }
+  .projects h2 {
+    font-size: 57px;
+    letter-spacing: 1px;
+  }
   .project-card {
-    width: 200px;
+    width: 150px;
+    border: 0px solid #e67e22;
+  }
+  .project-card:active{
+    border: 3px solid #e67e22;
+  }
+  .project-card h4 {
+    font-size: 15px;
+  }
+  .resume h2{
+    color: white;
+  }
+  .resume{
+    width: 490px;
+    height: 1000px;
+    background-color: #121212;
+    align-content: center;
+  }
+  .resume h2 {
+    font-size: 57px;
+    letter-spacing: 1px;
+  }
+  .resume-btn{
+    background-color: #e67e22;
+  }
+  .resume-btn:active{
+    background-color: white;
+  }
+  .connect{
+    width: 490px;
+    height: 1000px;
+    padding: 30px;
+    align-content: center;
+    justify-content: center;
+  }
+  .connect h2{
+    font-size: 57px;
+    letter-spacing: 1px;
+  }
+  .connect p {
+    font-size: 17px;
   }
 
   .navbar {
+    width: 400px;
+    font-size: 15px;
     gap: 2px;
-    padding: 5px;
+    transition: none;
   }
 }
 /* Default hidden state for all sections */
