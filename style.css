@@ -196,7 +196,8 @@ a {
 
 .project-card h4 {
   font-weight: bold;
-  font-size: 1.2rem;
+  font-family: Poppins;
+  font-size: .8rem;
   padding: 20px;
   background-color: #ffffff;
 }
