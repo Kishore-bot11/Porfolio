@@ -456,6 +456,9 @@ a {
   .connect p {
     font-size: 17px;
   }
+  .AI img{
+  bottom: 90px;
+}
 
   .navbar {
     width: 400px;
