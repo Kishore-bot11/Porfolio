@@ -94,16 +94,6 @@ a {
   }
 }
 
-/* Arrow Down - rotate 45 degrees for downward direction */
-.arrow-down {
-  border: solid #f39c12;
-  border-width: 0 4px 4px 0;
-  transform: rotate(45deg);
-  display: inline-block;
-  padding: 5px;
-  margin-left: 10px;
-  animation: pulse 1.5s infinite ease-in-out;
-}
 /* About me */
 .about{
   background-color: #121212;
@@ -360,6 +350,9 @@ a {
     align-self: center;
     margin-left: -260px;
     animation: pulse 1.5s infinite ease-in-out;
+  }
+  .scroll-down{
+    margin-top: 70%;
   }
   .about{
     width: 480px;
