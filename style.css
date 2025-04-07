@@ -334,6 +334,17 @@ a {
     opacity: 1;
   }
 }
+.AI img{
+  position: fixed;
+  bottom: 20px;     /* 20px from the bottom */
+  right: 20px;      /* 20px from the right */
+  width: 60px;     /* adjust as needed */
+  height: auto;
+  z-index: 9999; 
+  border-radius: 5em;
+  box-shadow: 0px 0px 10px #f39c12;
+}
+
 
 /* Responsive Design */
 @media (max-width: 480px) {
