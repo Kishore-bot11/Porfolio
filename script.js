@@ -96,8 +96,25 @@ document.querySelectorAll('[data-sound]').forEach(element => {
     }
 
     if (type === "skills") {
-      response = "My skills include UI/UX Design, Figma, Adobe XD, Photoshop, Illustrator, Branding, Prototyping, and Design Systems.";
-    }
+  response =
+    "I specialize in creating user-centered, visually compelling, and scalable digital experiences by blending strategy, creativity, and usability.\n\n" +
+
+    "Design & UX\n" +
+    "#UIUXDesign #UserCenteredDesign #InteractionDesign #DesignThinking #Wireframing #Prototyping #UsabilityTesting #DesignSystems\n\n" +
+
+    "Visual & Brand Design\n" +
+    "#GraphicDesign #BrandIdentity #VisualDesign #Typography #ColorTheory #MarketingCreatives #SocialMediaDesign\n\n" +
+
+    "Tools & Platforms\n" +
+    "#Figma #AdobeXD #Photoshop #Illustrator #AfterEffects #Canva #Framer #Webflow\n\n" +
+
+    "Product & Web\n" +
+    "#ResponsiveDesign #WebDesign #MobileAppDesign #SaaSDesign #LandingPageDesign #PortfolioDesign\n\n" +
+
+    "Collaboration & Growth\n" +
+    "#CrossFunctionalCollaboration #ProblemSolving #CreativeThinking #ContinuousLearning #AgileWorkflow #TeamPlayer";
+}
+
 
     if (type === "contact") {
       response = "You can reach me via email or LinkedIn. My resume is available for download on this website.";
@@ -109,7 +126,7 @@ document.querySelectorAll('[data-sound]').forEach(element => {
     aiBody.appendChild(msg);
 
     let i = 0;
-    const speed = 30; // typing speed (lower = faster)
+    const speed = 6; // typing speed (lower = faster)
 
     const typeEffect = setInterval(() => {
       msg.textContent = response.slice(0, i);
