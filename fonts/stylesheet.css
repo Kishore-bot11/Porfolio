@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'GC Gudlak Demo ExtBd';
+    src: url('GCGudlakDemo-ExtraBold.woff2') format('woff2'),
+        url('GCGudlakDemo-ExtraBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
