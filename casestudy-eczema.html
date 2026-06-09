@@ -15,18 +15,53 @@
       <div class="case-content">
         <h1>EczemaClinic UK — Full Website Redesign</h1>
         <p class="case-meta">Website Redesign · 2025</p>
-        <h3>Overview</h3>
-        <p>Led a full redesign to improve clarity, trust signals and conversion for a niche medical brand in the UK.</p>
+        <h3>Project Summary</h3>
+        <p>Led a complete website redesign for EczemaClinic UK, transforming the brand’s digital presence with a modern, user-centric layout that improves clarity, trust, and engagement. The redesign focused on enhancing user experience, visual hierarchy, accessibility, and content relevance for both patients and healthcare professionals.</p>
         <h3>My role</h3>
-        <p>Product Designer — research, IA, UI, prototype, developer handoff.</p>
-        <h3>Process</h3>
-        <p>Research → IA → Wireframes → High-fidelity UI → Handoff. Delivered annotated specs and reusable components.</p>
+        <p>UI/UX Designer & Web Redesign Specialist</p>
+        <h3>What I Improved</h3>
+        <p>💡Holistic Visual Redesign: Reimagined the site with a clean, professional aesthetic optimized for readability and emotional comfort, appropriate for a healthcare audience
+        <br>💡Improved Navigation & Structure: Streamlined the information architecture to ensure visitors can easily find services, treatment guides, and contact information
+        <br>💡Enhanced Trust & Authority: Designed clear sections for clinical expertise, treatment solutions, and patient support to reinforce credibility
+        <br>💡User-Centered Layouts: Applied thoughtful typography, spacing, and visual cues to reduce clutter and support accessibility
+        <br>💡Mobile-Responsive Optimization: Ensured consistent experience across devices with responsive breakpoints and adaptive elements
+        <br>💡Clear Calls-to-Action: Strategically placed CTAs throughout the site to encourage inquiries, appointment bookings, and patient engagement
+        <br>💡Visual Storytelling: Used relevant imagery and icons to support comprehension and build an empathetic connection with users
+        <br>💡​​​​​​​Content Hierarchy & Readability: Organized content into digestible sections with clear headings, supporting patient education and easy scanning</p>
         <h3>Outcome</h3>
-        <p>Improved clarity and conversion-focused flows; detailed handoff for engineering.</p>
+        <p>The redesigned website now delivers a more intuitive and trustworthy user experience, increases engagement through clear visual direction, and reinforces the clinic’s expertise in dermatological care. The result is a site that feels welcoming, informative, and professional—fit for a healthcare brand with a mission of support and education.</p>
+        <h3>Skills & Tools</h3>
+        <p>UI/UX Design • Web Redesign • Information Architecture • Visual Hierarchy • Responsive Design • Accessibility-Focused layouts • CTAs & Conversion Optimization</p>
         <p><a class="btn-lime" href="https://www.behance.net/gallery/241791423/Full-Website-Redesign-EczemaClinic-UK" target="_blank" rel="noopener">View Behance</a></p>
         <p class="case-cta"><a class="btn-ghost" href="index.html#works">← Back to Projects</a></p>
       </div>
     </article>
+    <section class="case-scroll" aria-label="Full website preview">
+      <div class="scroll-header">
+        <div>
+          <div class="section-label">Preview</div>
+          <h2>Full website scroll preview</h2>
+        </div>
+      </div>
+      <div class="scroll-frame">
+        <div class="scroll-track">
+          <img src="image/Rectangle 3.png" alt="EczemaClinic full website preview" loading="lazy">
+        </div>
+      </div>
+    </section>
   </main>
+  <script>
+    // Handle manual scrolling of case study images
+    document.querySelectorAll('.scroll-frame').forEach(frame => {
+      let scrollTimeout;
+      frame.addEventListener('scroll', () => {
+        frame.classList.add('is-scrolling');
+        clearTimeout(scrollTimeout);
+        scrollTimeout = setTimeout(() => {
+          frame.classList.remove('is-scrolling');
+        }, 1500);
+      });
+    });
+  </script>
 </body>
 </html>

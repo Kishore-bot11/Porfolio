@@ -1,4 +1,13 @@
- /* ===================== TOKENS ===================== */
+ /* ===================== FONTS ===================== */
+@font-face {
+  font-family: 'Pricedown';
+  src: url('fonts/Pricedown Bl.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ===================== TOKENS ===================== */
     :root {
       --bg:           #0a0a0a;
       --surface:      #111111;
@@ -13,7 +22,7 @@
       --accent-dim:   rgba(232,255,71,0.12);
       --red:          #F5332C;
 
-      --font-display: 'Instrument Serif', Georgia, serif;
+      --font-display: 'Pricedown', Georgia, serif;
       --font-body:    'Inter', system-ui, sans-serif;
 
       --text-xs:   clamp(0.7rem,  0.65rem + 0.25vw, 0.8rem);
@@ -457,9 +466,25 @@
 .case-study{max-width:var(--content);margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:var(--sp-8);align-items:start;padding:var(--sp-8);border-radius:var(--radius-md);}
 .case-thumb{width:100%;height:auto;border-radius:var(--radius-md);object-fit:cover}
 .case-content{padding:var(--sp-4)}
-.case-content h1{font-family:var(--font-display);font-size:clamp(1.4rem,2.6vw,2.6rem);margin-bottom:var(--sp-2)}
+.case-content h1{font-family:var(--font-display);font-size:clamp(1.4rem,2.6vw,2.6rem);margin-bottom:0}
+.case-content h1 + p{margin:var(--sp-4) 0}
+.case-content h3{margin-bottom:0}
+.case-content h3 + p{margin:var(--sp-4) 0}
 .case-meta{color:var(--text-muted);font-size:var(--text-sm);margin-bottom:var(--sp-4)}
-@media(max-width:900px){.case-study{grid-template-columns:1fr;padding:var(--sp-4)}}
+.case-scroll{max-width:var(--content);margin:var(--sp-12) auto 0;padding:0 var(--sp-4);display:flex;flex-direction:column;align-items:center}
+.case-scroll .scroll-header{display:flex;align-items:flex-end;justify-content:space-between;gap:var(--sp-4);margin-bottom:var(--sp-6)}
+.case-scroll .scroll-header .section-label{margin-bottom:0}
+.case-scroll .scroll-header h2{font-size:clamp(1.5rem,2.2vw,2.2rem);margin:0;letter-spacing:-.02em}
+.case-scroll .scroll-frame{position:relative;overflow-y:auto;overflow-x:hidden;border-radius:var(--radius-xl);border:12px solid #1a1a1a;background:#0a0a0a;height:clamp(560px,72vh,820px);scroll-behavior:smooth;box-shadow:0 0 0 1px var(--border),inset 0 0 0 1px rgba(255,255,255,.05),0 20px 60px rgba(0,0,0,.8)}
+.case-scroll .scroll-frame::before{content:'';position:absolute;top:-20px;left:50%;transform:translateX(-50%);width:35%;height:8px;background:#1a1a1a;border-radius:8px 8px 0 0;z-index:10;box-shadow:inset 0 -1px 0 rgba(255,255,255,.1)}
+.case-scroll .scroll-frame::after{content:'';position:absolute;bottom:-25px;left:50%;transform:translateX(-50%);width:15%;height:6px;background:#1a1a1a;border-radius:0 0 6px 6px;z-index:10}
+.case-scroll .scroll-track{display:block;animation:scroll-long 26s linear infinite alternate;will-change:transform}
+.case-scroll .scroll-frame.is-scrolling .scroll-track{animation-play-state:paused}
+.case-scroll .scroll-track img{width:100%;display:block;object-fit:cover;min-height:140%;transform:translate3d(0,0,0)}
+@keyframes scroll-long{0%{transform:translateY(0);}100%{transform:translateY(-28%)}}
+@media(prefers-reduced-motion:reduce){.case-scroll .scroll-track{animation:none}} 
+@media(max-width:900px){.case-scroll .scroll-frame{height:clamp(420px,60vh,620px);border-width:10px}.case-scroll .scroll-frame::before{height:6px;top:-16px}.case-scroll .scroll-frame::after{height:5px;bottom:-20px}}
+@media(max-width:650px){.case-scroll .scroll-frame{height:calc(100vw * 1.35);border-width:8px}.case-scroll .scroll-frame::before{height:5px;top:-12px}.case-scroll .scroll-frame::after{height:4px;bottom:-15px}}
 
 /* CTA alignment for case study pages */
 .case-cta{grid-column:1/-1;margin-top:var(--sp-6)}

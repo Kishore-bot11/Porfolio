@@ -23,6 +23,32 @@
         <p class="case-cta"><a class="btn-ghost" href="index.html#works">← Back to Projects</a></p>
       </div>
     </article>
+    <section class="case-scroll" aria-label="Full website preview">
+      <div class="scroll-header">
+        <div>
+          <div class="section-label">Preview</div>
+          <h2>Full website scroll preview</h2>
+        </div>
+      </div>
+      <div class="scroll-frame">
+        <div class="scroll-track">
+          <img src="image/Rectangle 7.png" alt="Resound Energy full website preview" loading="lazy">
+        </div>
+      </div>
+    </section>
   </main>
+  <script>
+    // Handle manual scrolling of case study images
+    document.querySelectorAll('.scroll-frame').forEach(frame => {
+      let scrollTimeout;
+      frame.addEventListener('scroll', () => {
+        frame.classList.add('is-scrolling');
+        clearTimeout(scrollTimeout);
+        scrollTimeout = setTimeout(() => {
+          frame.classList.remove('is-scrolling');
+        }, 1500);
+      });
+    });
+  </script>
 </body>
 </html>
