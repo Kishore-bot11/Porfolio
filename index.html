@@ -1,291 +1,543 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap" rel="stylesheet">
+  <title>Kishore R — UI/UX Designer</title>
+  <meta name="description" content="Kishore R — UI/UX & Product Designer with 2+ years crafting user-focused digital products. Based in Chennai, India.">
 
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins|Anton">
-  <link rel="stylesheet" href="style.css">
-  <script defer src="script.js"></script>
+  <!-- Fonts -->
+  <link rel="script" href="Script.js">
+  <link rel="stylesheet" href="Stylesheet.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+
 </head>
 <body>
-  <div id="cursor-motion"></div>
 
-    <Section class="Hero" id="Home">
-<div class="NavBar animate fade-up delay-1">
-  <div class="head" style="font-size: 1.5em;">
-    <h2 style="font-family: Sedgwick Ave Display, cursive; font-weight: 300;">KISHORE R</h2>
+  <!-- CUSTOM CURSOR -->
+  <div class="cursor" id="cursorDot" aria-hidden="true"></div>
+  <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+
+  <!-- ==============================
+       NAVBAR
+  ============================== -->
+  <header>
+    <nav class="nav" role="navigation" aria-label="Primary navigation">
+      <a class="nav-brand" href="#home">Kishore <span>R.</span></a>
+
+      <div class="nav-links">
+        <a class="nav-link" href="#works">Work</a>
+        <a class="nav-link" href="#about">About</a>
+        <a class="nav-link" href="#experience">Experience</a>
+        <a class="nav-link" href="#contact">Contact</a>
+        <div class="nav-available" aria-label="Available for work">
+          <span class="pulse" aria-hidden="true"></span>
+          Available
+        </div>
+      </div>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Mobile drawer -->
+  <div class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+    <div class="drawer-nav">
+      <a href="#works" class="drawer-link">Work</a>
+      <a href="#about" class="drawer-link">About</a>
+      <a href="#experience" class="drawer-link">Experience</a>
+      <a href="#contact" class="drawer-link">Contact</a>
+    </div>
+    <div class="drawer-actions">
+      <a href="mailto:kishoreravi1111@mail.com" class="btn-ghost">Send a message</a>
+      <a href="https://www.linkedin.com/" target="_blank" rel="noopener" class="btn-lime">Connect on LinkedIn</a>
+    </div>
+    <div class="drawer-footer">
+      <div class="footer-brand">Kishore R.</div>
+      <p>Have a project? Let’s talk.</p>
+      <p><a href="mailto:kishoreravi1111@mail.com" class="drawer-footer-link">kishoreravi1111@mail.com</a></p>
+    </div>
   </div>
 
-  <!-- Desktop Nav -->
-  <div class="NavBTN desktop-nav">
-    <a href="#Home">HOME</a>
-    <a href="#Works">WORKS</a>
-    <a href="#About">ABOUT</a>
-    <a href="#Contact">CONTACT</a>
-    <div class="cta"><a href="mailto:kishoreravi1111@mail.com">GET IN TOUCH</a> <img src="image/Arrow1.png" alt=""></div>
-  </div>
-
-  <!-- Mobile Hamburger -->
-  <div class="hamburger" id="hamburger">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-
-  <!-- Mobile Menu -->
-  <div class="NavBTN mobile-menu" id="mobileMenu">
-    <a href="#Home">HOME</a>
-    <a href="#Works">WORKS</a>
-    <a href="#About">ABOUT</a>
-    <a href="#Contact">CONTACT</a>
-  </div>
+  <!-- ==============================
+       HERO
+  ============================== -->
+  <main>
+    <section class="hero" id="home" aria-label="Introduction">
+      <!-- Left rotating image -->
+<div class="hero-orbit hero-orbit--left" aria-hidden="true">
+  <img src="image/Star.png" alt="" class="orbit-img"
+       width="260" height="260" loading="eager" draggable="false">
 </div>
 
-        
-<div class="herocontent">
-  <div class="Herotext">
-  <div class="heading1 animate from-left delay-2">
-    <h2 class="hero-sub">Hey, I’m</h2><br>
-    <h1 class="hero-title">UI/UX<br><span>DESIGNER</span></h1>
-  </div>
-
-  <div class="highlight">
-  <div class="item animate fade-left delay-4">
-    <h1><span>#</span>01</h1>
-    <h2>Web Experiences</h2>
-  </div>
-
-  <div class="item animate fade-left delay-5">
-    <h1><span>#</span>02</h1>
-    <h2>App Interfaces</h2>
-  </div>
-
-  <div class="item animate fade-left delay-6">
-    <h1><span>#</span>03</h1>
-    <h2>Brand Identity</h2>
-  </div>
-
-  <div class="item animate fade-left delay-7">
-    <h1><span>#</span>04</h1>
-    <h2>Visual Systems</h2>
-  </div>
-</div>
-</div>
-  <div class="heading2 animate from-right delay-3">
-    <img src="image/Heroimg.png" alt="">
-  </div>
-  </div>
-
-
+<!-- Right rotating image -->
+<div class="hero-orbit hero-orbit--right" aria-hidden="true">
+  <img src="image/Star.png" alt="" class="orbit-img"
+       width="260" height="260" loading="eager" draggable="false">
 </div>
 
-    </Section>
-<section class="strap animate fade-up delay-8">
-  <div class="strap-track" id="strapTrack">
+      <p class="hero-eyebrow">UI/UX &amp; Product Designer · Chennai, India</p>
 
-    <div class="strap-item">User-centered design with a strong focus on function and aesthetics</div>
-    <div class="strap-item">Thoughtful design. Meaningful experiences</div>
-    <div class="strap-item">Solving real problems through research-driven design</div>
+      <h1 class="hero-name">
+        Crafting<br>
+        <em>experiences</em><br>
+        people love.
+      </h1>
 
-    <!-- duplicate -->
-    <div class="strap-item">User-centered design with a strong focus on function and aesthetics</div>
-    <div class="strap-item">Thoughtful design. Meaningful experiences</div>
-    <div class="strap-item">Solving real problems through research-driven design</div>
+      <!-- Stats -->
+      <div class="hero-stats">
+        <div class="stat-item">
+          <div class="stat-num">2<span>+</span></div>
+          <div class="stat-label">Years Experience</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">10<span>+</span></div>
+          <div class="stat-label">Projects Delivered</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">6<span>+</span></div>
+          <div class="stat-label">Happy Clients</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">100<span>%</span></div>
+          <div class="stat-label">Research-Driven</div>
+        </div>
+      </div>
 
-  </div>
-</section>
+      <div class="hero-bottom">
+        <p class="hero-desc">
+          I'm <strong>Kishore R</strong>, a UI/UX designer blending <strong>research, strategy, and visual craft</strong> to build intuitive digital products. From concept to pixel-perfect delivery.
+        </p>
+        <div class="hero-ctas">
+          <a href="#works" class="btn-lime">
+            See my work
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="mailto:kishoreravi1111@mail.com" class="btn-ghost">
+            Say hello
+          </a>
+        </div>
+      </div>
 
+      <!-- Scroll hint -->
+      <div class="scroll-hint" aria-hidden="true">
+        <span>Scroll</span>
+        <div class="scroll-line"></div>
+      </div>
 
+    </section>
 
-<section class="works" id="Works">
-    <div class="workhead">
-    <div class="workcontent">
-        <h1 class="headings">WORKS</h1>
-        <span class="recline"></span>
-        <h1 style="font-weight: lighter; font-size: 26px;">Selected projects highlighting my design process. <br> Focused on real-world challenges and outcomes.</h1>
-    </div>
-    <div class="cta"><a href="https://www.behance.net/3fc41c09" target="_blank">VIEW BEHANCE</a><img src="image/Arrow1.png" alt=""></div>
-    </div>
-    <div class="projects">
-  <div class="projectcard">
-    <img src="image/Frame 24.png" alt="EczemaClinic UK" class="proimg">
-    <div class="project-info">
-      <h1>Full Website Redesign — <span class="hl">EczemaClinic UK</span></h1>
-      <h4>Led a complete website redesign for EczemaClinic UK, transforming the brand’s digital presence with a modern, user-centric layout that improves clarity, trust, and engagement.</h4>
-      <a href="https://www.behance.net/gallery/241791423/Full-Website-Redesign-EczemaClinic-UK" class="cta1" target="_blank" rel="noopener">READ MORE <img src="image/Arrow.png" alt=""></a>
-    </div>
-  </div>
-
-  <div class="projectcard">
-    <img src="image/Micro Rentals (Home page) 1.png" alt="MicroRentals" class="proimg">
-    <div class="project-info">
-      <h1>Website Revamp — <span class="hl">MicroRentals</span></h1>
-      <h4>Led a complete redesign and UI/UX overhaul of MicroRentals’ corporate website, improving navigation, visual hierarchy, and content structure for a user-centric experience.</h4>
-      <a href="https://www.behance.net/gallery/241785767/Website-Revamp-MicroRentals-%28microrentalscomau%29" class="cta1" target="_blank" rel="noopener">READ MORE <img src="image/Arrow.png" alt=""></a>
-    </div>
-  </div>
-
-  <div class="projectcard">
-    <img src="image/Frame 20.png" alt="Resound Energy" class="proimg">
-    <div class="project-info">
-      <h1>UX Optimization — <span class="hl">Resound Energy</span></h1>
-      <h4>Enhanced the Resound Energy website focusing on user experience, SEO, and conversion optimization while maintaining a clean and user-friendly interface.</h4>
-      <a href="https://www.behance.net/gallery/241790283/Website-Enhancement-UX-Optimization-Resound-Energy" class="cta1" target="_blank" rel="noopener">READ MORE <img src="image/Arrow.png" alt=""></a>
-    </div>
-  </div>
-  <div class="projectcard">
-    <img src="image/Rectangle 6.png" alt="Shoe Store" class="proimg">
-    <div class="project-info">
-      <h1>Landing Page - Mobile — <span class="hl">Shoe Store</span></h1>
-      <h4>Explore Curated Collection Of Sneakers, Heels, Boots And More, Sourced From Top Designers. Enjoy User-Friendly Navigation, Detailed Products Descriptions And Hassle-Free Checkout. We Ensure Customer Satisfication At Every Step. Elevate Your Shoe Shopping Experience With Our Comprehensive Online Service.</h4>
-      <a href="https://www.behance.net/gallery/199123441/Mobile-website-Landing-Page-UIUX-design-web-design" class="cta1" target="_blank" rel="noopener">READ MORE <img src="image/Arrow.png" alt=""></a>
-    </div>
-  </div>
-  <div class="projectcard">
-    <img src="image/Rectangle 7.png" alt="Shoe Store" class="proimg">
-    <div class="project-info">
-      <h1>Landing Page - Web — <span class="hl">Shoe Store</span></h1>
-      <h4>Explore Curated Collection Of Sneakers, Heels, Boots And More, Sourced From Top Designers. Enjoy User-Friendly Navigation, Detailed Products Descriptions And Hassle-Free Checkout. We Ensure Customer Satisfication At Every Step. Elevate Your Shoe Shopping Experience With Our Comprehensive Online Service.</h4>
-      <a href="https://www.behance.net/gallery/197909687/Website-Landing-Page-Shoe-Store-Shopping-Website" class="cta1" target="_blank" rel="noopener">READ MORE <img src="image/Arrow.png" alt=""></a>
-    </div>
-  </div>
-  <div class="projectcard">
-    <img src="image/Rectangle 3.png" alt="Zero Waste" class="proimg">
-    <div class="project-info">
-      <h1>Case Study - App screens — <span class="hl">Zero Waste</span></h1>
-      <h4>At Zero-Waste, we are passionate about creating a more sustainable and environmentally responsible future. Our mission is to inspire and empower individuals, businesses, and communities to adopt zero-waste practices and reducetheir environmental footprint.</h4>
-      <a href="https://www.behance.net/gallery/187714751/Zero-Waste-Case-Study-App-screens-User-Research" class="cta1" target="_blank" rel="noopener">READ MORE <img src="image/Arrow.png" alt=""></a>
-    </div>
-  </div>
-</div>
-
-</section>
-<section class="about" id="About">
-    <div class="abouthead">
-    <div class="aboutcontent">
-        <h1 class="headings">ABOUT</h1>
-        <span class="recline"></span>
-        <h1 style="font-weight: lighter; font-size: 26px;">Designing with empathy, <br> clarity, and purpose.</h1>
-    </div>
-    <div class="cta"><a href="https://www.linkedin.com/in/kishore1117/" target="_blank">VIEW LINKEDIN</a><img src="image/Arrow1.png" alt=""></div>
-    </div>
-    <div class="abouthead" style="padding: 0px 80px;">
-
-    <div class="aboutcontent">
-        <h1 style="font-weight: lighter; font-size: 26px; width: 70%;">I’m a UI/UX and Product Designer with 2+ years of experience crafting user-focused digital products. My approach blends research, strategy, and visual design to create intuitive experiences that solve real-world problems. I’m always eager to learn, collaborate, and push my design thinking further.</h1>
+    <!-- ==============================
+         MARQUEE
+    ============================== -->
+    <div class="marquee-wrap" aria-hidden="true">
+      <div class="marquee-track" id="marqueeTrack">
+        <div class="marquee-item"><span class="marquee-dot"></span>User Research</div>
+        <div class="marquee-item"><span class="marquee-dot"></span>Wireframing</div>
+        <div class="marquee-item"><span class="marquee-dot"></span>Prototyping</div>
+        <div class="marquee-item"><span class="marquee-dot"></span>Usability Testing</div>
+        <div class="marquee-item"><span class="marquee-dot"></span>Design Systems</div>
+        <div class="marquee-item"><span class="marquee-dot"></span>Visual Design</div>
+        <div class="marquee-item"><span class="marquee-dot"></span>Interaction Design</div>
+        <div class="marquee-item"><span class="marquee-dot"></span>Brand Identity</div>
+        <div class="marquee-item"><span class="marquee-dot"></span>User Research</div>
+        <div class="marquee-item"><span class="marquee-dot"></span>Wireframing</div>
+        <div class="marquee-item"><span class="marquee-dot"></span>Prototyping</div>
+        <div class="marquee-item"><span class="marquee-dot"></span>Usability Testing</div>
+        <div class="marquee-item"><span class="marquee-dot"></span>Design Systems</div>
+        <div class="marquee-item"><span class="marquee-dot"></span>Visual Design</div>
+        <div class="marquee-item"><span class="marquee-dot"></span>Interaction Design</div>
+        <div class="marquee-item"><span class="marquee-dot"></span>Brand Identity</div>
+      </div>
     </div>
 
-    </div>
-    <div class="process">
-  <div class="step">Discover</div>
-  <span class="connector"></span>
+    <!-- ==============================
+         SELECTED WORKS
+    ============================== -->
+    <section class="section" id="works" aria-label="Selected works">
+      <div class="works-header">
+        <div>
+          <div class="section-label reveal">Selected Work</div>
+          <h2 class="section-heading reveal delay-1">Projects that <em>define</em> me.</h2>
+        </div>
+          <a href="https://www.behance.net/3fc41c09" target="_blank" rel="noopener" class="btn-lime" class="hero-ctas">
+            Full Portfolio
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
 
-  <div class="step">Define</div>
-  <span class="connector"></span>
+      </div>
 
-  <div class="step">Ideate</div>
-  <span class="connector"></span>
+      <div class="bento">
 
-  <div class="step">Design</div>
-  <span class="connector"></span>
+        <!-- Card 1 — Full width hero -->
+        <article class="bento-card bc-1 reveal" aria-label="EczemaClinic UK Redesign">
+          <img class="card-thumb" src="image/Frame 24.png" alt="EczemaClinic UK full website redesign — before and after screens" width="700" height="394" loading="lazy">
+          <div class="card-info">
+            <span class="card-tag">Website Redesign</span>
+            <h3 class="card-title">EczemaClinic UK — Full Website Redesign</h3>
+            <p class="card-desc">Led a complete digital transformation improving clarity, trust signals, and conversion flows for a UK medical brand.</p>
+          </div>
+          <div class="card-footer">
+            <a href="casestudy-eczema.html" class="card-footer-link">
+              View Case Study
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+            </a>
+            <span class="card-year">2025</span>
+          </div>
+        </article>
 
-  <div class="step">Validate</div>
-  <span class="connector"></span>
+        <!-- Card 2 -->
+        <article class="bento-card bc-2 reveal delay-1" aria-label="MicroRentals Revamp">
+          <img class="card-thumb" src="image/Micro Rentals (Home page) 1.png" alt="MicroRentals website revamp" width="500" height="281" loading="lazy">
+          <div class="card-info">
+            <span class="card-tag">UI/UX Overhaul</span>
+            <h3 class="card-title">MicroRentals — Website Revamp</h3>
+            <p class="card-desc">Restructured navigation, visual hierarchy, and content architecture for a corporate Australian rental platform.</p>
+          </div>
+          <div class="card-footer">
+            <a href="casestudy-microrentals.html" class="card-footer-link">
+              View Case Study
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+            </a>
+            <span class="card-year">2025</span>
+          </div>
+        </article>
 
-  <div class="step">Deliver</div>
-</div>
+        <!-- Card 3 -->
+        <article class="bento-card bc-3 reveal delay-1" aria-label="Resound Energy UX">
+          <img class="card-thumb" src="image/Frame 20.png" alt="Resound Energy UX optimization" width="400" height="225" loading="lazy">
+          <div class="card-info">
+            <span class="card-tag">UX Optimization</span>
+            <h3 class="card-title">Resound Energy</h3>
+            <p class="card-desc">Enhanced UX, SEO flows, and conversion paths for an energy sector brand.</p>
+          </div>
+          <div class="card-footer">
+            <a href="casestudy-resound.html" class="card-footer-link">View Case Study <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a>
+            <span class="card-year">2025</span>
+          </div>
+        </article>
 
-</section>
+        <!-- Card 4 -->
+        <article class="bento-card bc-4 reveal delay-2" aria-label="Shoe Store Mobile">
+          <img class="card-thumb" src="image/Rectangle 6.png" alt="Shoe Store mobile landing page" width="400" height="225" loading="lazy">
+          <div class="card-info">
+            <span class="card-tag">Mobile · Landing Page</span>
+            <h3 class="card-title">Shoe Store — Mobile</h3>
+            <p class="card-desc">Seamless mobile shopping experience with intuitive checkout flow.</p>
+          </div>
+          <div class="card-footer">
+            <a href="casestudy-shoestore-mobile.html" class="card-footer-link">View Case Study <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a>
+            <span class="card-year">2024</span>
+          </div>
+        </article>
 
-<section class="Experience">
-    <div class="abouthead">
-    <div class="aboutcontent">
-        <h1 class="headings">EXPERIENCE</h1>
-    </div>
-    </div>
-    <div class="timeline">
-  <div class="dot-wrap">
-    <span class="year">2024</span>
-    <span class="dot"></span>
-  </div>
+        <!-- Card 5 -->
+        <article class="bento-card bc-5 reveal delay-3" aria-label="Shoe Store Web">
+          <img class="card-thumb" src="image/Rectangle 7.png" alt="Shoe Store desktop landing page" width="400" height="225" loading="lazy">
+          <div class="card-info">
+            <span class="card-tag">Web · E-commerce</span>
+            <h3 class="card-title">Shoe Store — Web</h3>
+            <p class="card-desc">Full desktop e-commerce experience optimised for browsing and conversion.</p>
+          </div>
+          <div class="card-footer">
+            <a href="casestudy-shoestore-web.html" class="card-footer-link">View Case Study <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a>
+            <span class="card-year">2024</span>
+          </div>
+        </article>
 
-  <span class="line"></span>
+        <!-- Card 6 -->
+        <article class="bento-card bc-6 reveal delay-2" aria-label="Zero Waste App">
+          <img class="card-thumb" src="image/Rectangle 3.png" alt="Zero Waste app case study screens" width="600" height="338" loading="lazy">
+          <div class="card-info">
+            <span class="card-tag">App Design · Case Study</span>
+            <h3 class="card-title">Zero Waste — App Screens &amp; User Research</h3>
+            <p class="card-desc">End-to-end case study for a sustainability-focused mobile app. Includes user research, information architecture, and high-fidelity prototype.</p>
+          </div>
+          <div class="card-footer">
+            <a href="casestudy-zerowaste.html" class="card-footer-link">View Case Study <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a>
+            <span class="card-year">2024</span>
+          </div>
+        </article>
 
-  <div class="dot-wrap">
-    <span class="year">2026</span>
-    <span class="dot"></span>
-  </div>
-</div>
+        <!-- Card 7 — Stan Ventures -->
+        <article class="bento-card bc-7 reveal delay-3" aria-label="Stan Ventures work">
+          <div style="background:var(--surface-2);display:flex;align-items:center;justify-content:center;aspect-ratio:16/9;width:100%;padding:var(--sp-8);">
+            <img src="image/Stan Logo.png" alt="Stan Ventures" width="200" height="80" style="max-height:80px;width:auto;object-fit:contain;filter:brightness(1.2);" loading="lazy">
+          </div>
+          <div class="card-info">
+            <span class="card-tag">Agency · Professional Work</span>
+            <h3 class="card-title">Stan Ventures — Executive Designer</h3>
+            <p class="card-desc">Shipped production-ready UI/UX for multiple client products. Collaborated cross-functionally with developers and PMs to drive quality design at scale.</p>
+          </div>
+          <div class="card-footer">
+            <a href="casestudy-stanventures.html" class="card-footer-link">View Case Study <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a>
+            <span class="card-year">2024–2026</span>
+          </div>
+        </article>
 
-    <div class="projects">
-  <div class="projectcard">
-    <img src="image/Stan Logo.png" alt="Shoe Store" class="proimg">
-    <div class="project-info">
-      <h1>Executive - UI/UX & Graphic Designer <br><span class="hl">STAN VENTURES</span></h1>
-      <h4>
-            <ul>
-                <li>Improved key user flows by simplifying interactions and reducing friction across screens.</li>
-                <li>Collaborated with developers and product teams to deliver high-quality, production-ready designs.</li>
-                <li>Applied research, testing, and iteration to create intuitive, user-focused digital experiences.</li>
+      </div><!-- /bento -->
+    </section>
+
+    <!-- ==============================
+         ABOUT
+    ============================== -->
+    <section class="section" id="about" aria-label="About Kishore">
+      <div class="section-label reveal">About</div>
+      <h2 class="section-heading reveal delay-1">Design is <em>thinking</em><br>made visual.</h2>
+
+      <div class="about-grid" style="margin-top:clamp(2rem,4vw,4rem);">
+        <div class="about-text reveal delay-1">
+          <p>I'm a <strong>UI/UX and Product Designer</strong> based in Chennai, India with 2+ years of experience building user-focused digital products across web, mobile, and brand.</p>
+          <p>My process starts with <strong>empathy and research</strong> — understanding the real problem before touching a pixel. I then use structured frameworks like Jobs-to-be-Done and double-diamond to move from insight to solution.</p>
+          <p>I believe great design is <strong>invisible</strong> — when it works perfectly, users don't notice the craft, they just feel at ease. That's the standard I hold myself to.</p>
+          <div style="margin-top:var(--sp-8);">
+            <a href="Resume/Kishore-Resume.pdf" download class="btn-ghost">
+              Download Resume
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="about-right reveal delay-2">
+          <div class="skills-label">Core Skills</div>
+          <div class="skills-grid">
+            <span class="skill-tag">User Research</span>
+            <span class="skill-tag">UX Strategy</span>
+            <span class="skill-tag">Wireframing</span>
+            <span class="skill-tag">Prototyping</span>
+            <span class="skill-tag">Visual Design</span>
+            <span class="skill-tag">Design Systems</span>
+            <span class="skill-tag">Interaction Design</span>
+            <span class="skill-tag">Usability Testing</span>
+            <span class="skill-tag">Information Architecture</span>
+            <span class="skill-tag">Brand Identity</span>
+            <span class="skill-tag">Responsive Design</span>
+            <span class="skill-tag">Graphic Design</span>
+          </div>
+
+          <div class="skills-label">Tools</div>
+          <div class="tools-row">
+            
+            <img class="tool-icon" src="https://img.icons8.com/ios/50/FFFFFF/figma--v1.png" alt="Figma" width="36" height="36" title="Figma" loading="lazy">
+            <img class="tool-icon" src="https://img.icons8.com/ios/50/FFFFFF/adobe-xd--v1.png" alt="Adobe XD" width="36" height="36" title="Adobe XD" loading="lazy">
+            <img class="tool-icon" src="https://img.icons8.com/ios/50/FFFFFF/adobe-illustrator--v1.png" alt="Illustrator" width="36" height="36" title="Adobe Illustrator" loading="lazy">
+            <img class="tool-icon" src="https://img.icons8.com/ios/50/FFFFFF/adobe-photoshop--v1.png" alt="Photoshop" width="36" height="36" title="Adobe Photoshop" loading="lazy">
+            <img class="tool-icon" src="https://img.icons8.com/ios/50/FFFFFF/notion--v1.png" alt="Notion" width="36" height="36" title="Notion" loading="lazy">
+            <img class="tool-icon" src="https://img.icons8.com/external-tal-revivo-regular-tal-revivo/24/FFFFFF/external-framer-the-only-tool-you-need-to-create-interactive-designs-for-any-platform-logo-regular-tal-revivo.png" alt="Framer" width="36" height="36" title="Framer" loading="lazy"> 
+            <img class="tool-icon" src="https://img.icons8.com/ios/50/FFFFFF/chatgpt.png" alt="ChatGPT" width="36" height="36" title="ChatGPT" loading="lazy">
+            <img class="tool-icon" src="https://img.icons8.com/ios/50/FFFFFF/perplexity-ai.png" alt="Perplexity AI" width="36" height="36" title="Perplexity AI" loading="lazy">
+          </div>
+          <br>
+          <div class="skills-label">Other Tools</div>
+          <div class="tools-row">
+            <img class="tool-icon" src="https://img.icons8.com/ios-filled/50/FFFFFF/davinci-resolve.png" alt="Davinci Resolve" width="36" height="36" title="Davinci Resolve" loading="lazy">
+            <img class="tool-icon" src="https://img.icons8.com/ios/50/FFFFFF/blender-3d.png" alt="Blender" width="36" height="36" title="Blender" loading="lazy">
+            <img class="tool-icon" src="image/Jitter.png" alt="Jitter" width="36" height="36" title="Jitter" loading="lazy">
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================
+         DESIGN PROCESS
+    ============================== -->
+    <section class="section" style="padding-top:0;" aria-label="Design process">
+      <div class="section-label reveal">How I Work</div>
+      <h2 class="section-heading reveal delay-1">My design <em>process.</em></h2>
+      <div style="height:clamp(1.5rem,3vw,2.5rem);"></div>
+      <div class="process-row">
+        <div class="process-step">
+          <div class="step-num">01</div>
+          <div class="step-name">Discover</div>
+          <div class="step-desc">User interviews, competitive analysis, heuristic evaluation — understanding the landscape before designing.</div>
+        </div>
+        <div class="process-step">
+          <div class="step-num">02</div>
+          <div class="step-name">Define</div>
+          <div class="step-desc">Synthesising research into clear problem statements, personas, and user journey maps.</div>
+        </div>
+        <div class="process-step">
+          <div class="step-num">03</div>
+          <div class="step-name">Ideate</div>
+          <div class="step-desc">Rapid sketching, concept exploration, and collaborative workshops to generate solutions.</div>
+        </div>
+        <div class="process-step">
+          <div class="step-num">04</div>
+          <div class="step-name">Design</div>
+          <div class="step-desc">High-fidelity UI, interaction patterns, and design systems — pixel-perfect, production-ready.</div>
+        </div>
+        <div class="process-step">
+          <div class="step-num">05</div>
+          <div class="step-name">Validate</div>
+          <div class="step-desc">Usability testing, A/B feedback, and iteration cycles to confirm the solution actually works.</div>
+        </div>
+        <div class="process-step">
+          <div class="step-num">06</div>
+          <div class="step-name">Deliver</div>
+          <div class="step-desc">Dev handoff with annotated specs, component libraries, and close collaboration through build.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================
+         EXPERIENCE
+    ============================== -->
+    <section class="section" id="experience" aria-label="Work experience" style="padding-top:0;">
+      <div class="section-label reveal">Experience</div>
+      <h2 class="section-heading reveal delay-1">Where I've <em>worked.</em></h2>
+      <div style="height:clamp(1.5rem,3vw,2.5rem);"></div>
+      <div class="exp-list">
+
+        <div class="exp-item reveal">
+          <div class="exp-date">Mar 2024 — Present</div>
+          <div>
+            <div class="exp-role">Executive — UI/UX &amp; Graphic Designer</div>
+            <div class="exp-company">Stan Ventures, Chennai</div>
+            <ul class="exp-bullets">
+              <li>Redesigned key client websites improving user engagement and conversion metrics across 6+ projects.</li>
+              <li>Collaborated directly with developers and PMs to deliver production-ready design with zero ambiguity.</li>
+              <li>Established reusable component libraries reducing design-to-dev time by ~30%.</li>
+              <li>Conducted usability testing and synthesised insights to drive iterative design improvements.</li>
             </ul>
-      </h4>
-      <a href="https://www.stanventures.com/" class="cta1" target="_blank" rel="noopener">VIEW SITE<img src="image/Arrow.png" alt=""></a>
+          </div>
+        </div>
+
+        <div class="exp-item reveal delay-1">
+          <div class="exp-date">2022 — 2024</div>
+          <div>
+            <div class="exp-role">Freelance UI/UX Designer</div>
+            <div class="exp-company">Independent</div>
+            <ul class="exp-bullets">
+              <li>Delivered end-to-end UX projects spanning mobile apps, e-commerce platforms, and brand identities.</li>
+              <li>Built detailed case studies documenting research, design decisions, and measurable outcomes.</li>
+              <li>Maintained a Behance portfolio resulting in consistent inbound client inquiries.</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==============================
+         CTA BAND
+    ============================== -->
+    <div class="cta-band" id="contact">
+      <div class="cta-inner">
+        <div class="section-label reveal" style="justify-content:center;">Contact</div>
+        <h2 class="cta-heading reveal delay-1">Let's <em>build</em><br>something great.</h2>
+        <p class="cta-sub reveal delay-2">Whether it's a product, a rebrand, or a complex UX problem — I'd love to hear about it.</p>
+        <div class="cta-buttons reveal delay-3">
+          <a href="mailto:kishoreravi1111@mail.com" class="btn-lime">
+            Send a message
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/kishore1117/" target="_blank" rel="noopener" class="btn-ghost">
+            Connect on LinkedIn
+          </a>
+        </div>
+      </div>
     </div>
-  </div>
-    </div>  
-</section>
-<section class="contact" id="Contact">
-  <div class="contact-bg"></div>
+  </main>
 
-  <div class="contact-content">
-    <h1 class="headings">Let’s work together</h1>
-    <p>Designing thoughtful digital experiences starts with a simple conversation.</p>
-
-    <div class="contact-cta">
-    <a href="mailto:kishoreravi1111@mail.com" class="btn primary">
-        Let’s Talk
-        <img src="image/mail.png" alt="Mail" class="btn-icon">
-    </a>
-    <a href="Resume/Kishore-Resume.pdf"  download class="btn secondary">View Resume</a>
-    </div>
-
-  </div>
-</section>
-
-<footer class="footer">
-  <div class="footer-content">
+  <!-- ==============================
+       FOOTER
+  ============================== -->
+  <footer class="footer" aria-label="Site footer">
     <div class="footer-left">
-      <p>© 2026 Kishore R. All rights reserved.</p>
+      <div class="footer-brand">Kishore R.</div>
+      <p class="footer-copy">© 2026 · UI/UX Designer · Chennai, India</p>
     </div>
 
-    <div class="footer-center">
-      <a href="https://www.linkedin.com/in/kishore1117/" target="_blank" class="social-icon">
-        <img src="image/linkedin_1377213.png" alt="LinkedIn">
+    <div class="footer-socials" aria-label="Social links">
+      <a href="https://www.linkedin.com/in/kishore1117/" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="LinkedIn">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
       </a>
-      <a href="https://www.behance.net/3fc41c09" target="_blank" class="social-icon">
-        <img src="image/behance_1377230.png" alt="Behance">
+      <a href="https://www.behance.net/3fc41c09" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Behance">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M7.5 11.5c.83 0 1.5-.67 1.5-1.5S8.33 8.5 7.5 8.5H5v3h2.5zm.25 1.5H5v3.5h2.75c1.1 0 1.75-.65 1.75-1.75S8.85 13 7.75 13zm8.5-3.25h-4v1.25h4V9.75zM12 2a10 10 0 1 0 0 20A10 10 0 0 0 12 2zm-1.5 13.5H3.5v-7H10c1.79 0 3 1.21 3 2.75 0 .83-.29 1.5-.75 2 .75.46 1.25 1.29 1.25 2.25 0 1.79-1.21 3-3 3zm8-5.5h-5.5v-1h5.5v1zm-1 3.25h-4.5v-.75h4.5v.75zm1-1.5h-5.5v-1h5.5v1z"/></svg>
       </a>
-      <a href="https://github.com/Kishore-bot11" target="_blank" class="social-icon">
-        <img src="image/github_4494756.png" alt="GitHub">
+      <a href="https://github.com/Kishore-bot11" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="GitHub">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
       </a>
     </div>
 
-    <div class="footer-right">
-      <a href="#Home" class="back-top">↑ Top</a>
-    </div>
-  </div>
-</footer>
-<div class="build-screen">
-  <div class="build-content">
-    <h1>404</h1>
-    <h2>Mobile View, Currently at Build</h2>
-    <p>This experience is under construction and optimized for desktop.</p>
-  </div>
-</div>
+    <a class="footer-top" href="#home" aria-label="Back to top">
+      Back to top
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+    </a>
+  </footer>
 
+  <!-- ==============================
+       SCRIPTS
+  ============================== -->
+  <script>
+    /* ---- Custom cursor ---- */
+    const dot  = document.getElementById('cursorDot');
+    const ring = document.getElementById('cursorRing');
+    let mx=0,my=0,px=0,py=0,rx=0,ry=0;
+    document.addEventListener('mousemove', e=>{mx=e.clientX;my=e.clientY;});
+    (function loop(){
+      px+=(mx-px)*0.18; py+=(my-py)*0.18;
+      rx+=(mx-rx)*0.10; ry+=(my-ry)*0.10;
+      dot.style.left=px+'px'; dot.style.top=py+'px';
+      ring.style.left=rx+'px'; ring.style.top=ry+'px';
+      requestAnimationFrame(loop);
+    })();
 
+    /* ---- Hamburger / drawer ---- */
+    const hamburger = document.getElementById('hamburger');
+    const drawer    = document.getElementById('drawer');
+    const close = ()=>{
+      hamburger.classList.remove('open');
+      drawer.classList.remove('open');
+      hamburger.setAttribute('aria-expanded','false');
+      document.body.style.overflow='';
+    };
+    hamburger.addEventListener('click',()=>{
+      const o=drawer.classList.toggle('open');
+      hamburger.classList.toggle('open',o);
+      hamburger.setAttribute('aria-expanded',String(o));
+      document.body.style.overflow=o?'hidden':'';
+    });
+    document.querySelectorAll('.drawer-link').forEach(l=>l.addEventListener('click',close));
+    window.addEventListener('scroll',close,{passive:true});
+
+    /* ---- Marquee ---- */
+    const track=document.getElementById('marqueeTrack');
+    let pos=0,spd=1.2,tgt=1.2;
+    (function run(){
+      pos-=spd;
+      if(Math.abs(pos)>=track.scrollWidth/2)pos=0;
+      track.style.transform=`translateX(${pos}px)`;
+      spd+=(tgt-spd)*0.07;
+      requestAnimationFrame(run);
+    })();
+    document.querySelector('.marquee-wrap').addEventListener('mouseenter',()=>tgt=0.2);
+    document.querySelector('.marquee-wrap').addEventListener('mouseleave',()=>tgt=1.2);
+
+    /* ---- Smooth scroll ---- */
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click',e=>{
+        const t=document.querySelector(a.getAttribute('href'));
+        if(!t)return; e.preventDefault();
+        window.scrollTo({top:t.getBoundingClientRect().top+scrollY-64,behavior:'smooth'});
+      });
+    });
+
+    /* ---- Scroll reveal ---- */
+    const revealObs = new IntersectionObserver(entries=>{
+      entries.forEach(en=>{
+        if(en.isIntersecting){ en.target.classList.add('up'); revealObs.unobserve(en.target); }
+      });
+    },{threshold:0.12});
+    document.querySelectorAll('.reveal,.reveal-l,.reveal-r,.process-step').forEach(el=>revealObs.observe(el));
+  </script>
 </body>
+</html>
