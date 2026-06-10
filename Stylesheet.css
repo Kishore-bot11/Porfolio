@@ -192,6 +192,14 @@
     .hamburger.open span:nth-child(2){opacity:0;transform:scaleX(0);}
     .hamburger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg);}
     @media(max-width:700px){
+      .nav{
+        left:1rem;
+        right:1rem;
+        width:auto;
+        max-width:calc(100vw - 2rem);
+        transform:none;
+        padding:0 var(--sp-4);
+      }
       .nav-links{display:none;}
       .hamburger{display:flex;}
     }
@@ -892,6 +900,12 @@
       gap:var(--sp-3);
       min-width:0;
     }
+    .section[aria-label="Design process"] .process-row{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+      gap:var(--sp-3);
+      align-items:stretch;
+    }
     .process-step{
       flex:0 0 min(320px,100%);
       scroll-snap-align:start;
@@ -917,6 +931,25 @@
       transition:color var(--trans);
     }
     .testimonial-step .step-desc a:hover{color:var(--accent);}
+
+    @media(max-width:700px){
+      .section[aria-label="Design process"] .process-row{
+        display:grid;
+        grid-template-columns:1fr;
+        gap:var(--sp-3);
+      }
+      .section[aria-label="Design process"] .process-step{
+        flex:1 1 auto;
+        width:100%;
+      }
+      .drawer{
+        overflow-x:hidden;
+        width:100vw;
+        left:0;
+        right:0;
+      }
+    }
+
     .testimonial-avatar{
       width:64px;height:64px;
       margin-bottom:var(--sp-4);
